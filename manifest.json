@@ -1,0 +1,18 @@
+{
+  "name": "LUXE INCOME",
+  "short_name": "LUXE",
+  "description": "Aplikasi pribadi untuk mencatat pemasukan",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#d8b36a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

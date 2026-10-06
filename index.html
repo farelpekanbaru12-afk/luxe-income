@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#09090b">
+
+  <title>LUXE INCOME</title>
+
+  <link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LUXE INCOME">
+
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <header class="topbar">
+
+      <div>
+        <div class="brand">
+          LUXE<span>INCOME</span>
+        </div>
+
+        <p id="greeting">
+          Good afternoon, Fharel
+        </p>
+      </div>
+
+      <button
+        class="icon-btn"
+        id="clearAllBtn">
+        ⋮
+      </button>
+
+    </header>
+
+
+    <main>
+
+      <section class="hero-card">
+
+        <div class="hero-top">
+
+          <div>
+
+            <p class="label">
+              TOTAL INCOME
+            </p>
+
+            <h1 id="totalIncome">
+              Rp 0
+            </h1>
+
+          </div>
+
+          <div class="gold-orb">
+            ✦
+          </div>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+          <div>
+
+            <span class="mini-label">
+              TRANSACTIONS
+            </span>
+
+            <strong id="transactionCount">
+              0
+            </strong>
+
+          </div>
+
+
+          <div class="trend">
+            <span>↗</span>
+            Pemasukan
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="stats-grid">
+
+        <article class="stat-card">
+
+          <div class="stat-icon">
+            ◷
+          </div>
+
+          <div>
+
+            <p>
+              BULAN INI
+            </p>
+
+            <strong id="monthIncome">
+              Rp 0
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <div class="stat-icon">
+            ✦
+          </div>
+
+          <div>
+
+            <p>
+              TERBESAR
+            </p>
+
+            <strong id="largestIncome">
+              Rp 0
+            </strong>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <section class="chart-card">
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="eyebrow">
+              OVERVIEW
+            </p>
+
+            <h2>
+              Income Flow
+            </h2>
+
+          </div>
+
+          <span class="period">
+            Terakhir 7 transaksi
+          </span>
+
+        </div>
+
+
+        <div
+          class="chart"
+          id="chart">
+        </div>
+
+      </section>
+
+
+      <section class="transactions-section">
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="eyebrow">
+              HISTORY
+            </p>
+
+            <h2>
+              Recent Income
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="emptyState"
+          class="empty-state">
+
+          <div class="empty-icon">
+            ＋
+          </div>
+
+          <h3>
+            Belum ada pemasukan
+          </h3>
+
+          <p>
+            Tambahkan pemasukan pertama kamu.
+          </p>
+
+        </div>
+
+
+        <div
+          id="incomeList"
+          class="income-list">
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <button
+      class="add-btn"
+      id="openModalBtn">
+
+      <span>
+        ＋
+      </span>
+
+      Tambah Pemasukan
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="modal-backdrop"
+    id="modal">
+
+    <div class="modal">
+
+      <button
+        class="close-btn"
+        id="closeModalBtn">
+        ×
+      </button>
+
+
+      <div class="modal-title">
+
+        <p class="eyebrow">
+          NEW TRANSACTION
+        </p>
+
+        <h2>
+          Tambah Pemasukan
+        </h2>
+
+      </div>
+
+
+      <form id="incomeForm">
+
+        <label>
+
+          Nominal
+
+          <div class="money-input">
+
+            <span>
+              Rp
+            </span>
+
+            <input
+              id="amount"
+              type="text"
+              inputmode="numeric"
+              placeholder="1.000"
+              autocomplete="off"
+              required>
+
+          </div>
+
+        </label>
+
+
+        <label>
+
+          Sumber Pemasukan
+
+          <input
+            id="source"
+            type="text"
+            maxlength="40"
+            placeholder="Contoh: Freelance"
+            required>
+
+        </label>
+
+
+        <label>
+
+          Tanggal
+
+          <input
+            id="date"
+            type="date"
+            required>
+
+        </label>
+
+
+        <label>
+
+          Catatan
+
+          <textarea
+            id="note"
+            maxlength="100"
+            placeholder="Tambahkan catatan..."></textarea>
+
+        </label>
+
+
+        <button
+          class="save-btn"
+          type="submit">
+
+          Simpan Pemasukan
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
